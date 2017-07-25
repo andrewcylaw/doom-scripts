@@ -3,7 +3,7 @@ package wad.lumps.linedef;
 import wad.lumps.Lump;
 import wad.lumps.Vertex;
 
-public class Linedef extends Lump {
+public abstract class Linedef extends Lump {
 
     private Vertex startVertex;
     private Vertex endVertex;
