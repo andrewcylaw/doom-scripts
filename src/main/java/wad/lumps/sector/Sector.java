@@ -12,6 +12,18 @@ public class Sector {
 
     private int lightLevel;
     private int sectorSpecial;
-    private int sectorTag;
+    private SectorId sectorTag;
+
+    public SectorId getSectorTag() {
+        return this.sectorTag;
+    }
+
+    public void setSectorTag(SectorId id) {
+        this.sectorTag = id;
+    }
+
+    public void setSectorTag(int id) {
+        this.setSectorTag(new SectorId(id));
+    }
 
 }

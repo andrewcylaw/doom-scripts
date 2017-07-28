@@ -1,15 +1,21 @@
 package wad.lumps.thing;
 
-public class ThingDoom extends Thing {
+import wad.lumps.thing.thingflag.DoomFlag;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DoomThing extends Thing {
 
     private short xPos;
     private short yPos;
     private short angle;
     private short type; // TODO: enumize this
-    private short spawnFlags;
+    private List<DoomFlag> spawnFlags;
 
-    public ThingDoom(int startPtr, int lumpSize, String name) {
+    public DoomThing(int startPtr, int lumpSize, String name) {
         super(startPtr, lumpSize, name);
+        this.spawnFlags = new ArrayList<>();
     }
 
     public short getxPos() {
@@ -44,11 +50,15 @@ public class ThingDoom extends Thing {
         this.type = type;
     }
 
-    public short getSpawnFlags() {
+    public List<DoomFlag> getSpawnFlags() {
         return spawnFlags;
     }
 
-    public void setSpawnFlags(short spawnFlags) {
+    public void setSpawnFlags(List<DoomFlag> spawnFlags) {
         this.spawnFlags = spawnFlags;
+    }
+
+    public void addSpawnFlag(DoomFlag spawnFlag) {
+        this.spawnFlags.add(spawnFlag);
     }
 }

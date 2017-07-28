@@ -2,7 +2,7 @@ package wad.lumps.thing;
 
 import wad.lumps.linedef.actionspecial.ActionSpecial;
 
-public class ThingHexen extends Thing {
+public class HexenThing extends Thing {
 
     private ThingId thingId;
     private short xPos;
@@ -14,7 +14,7 @@ public class ThingHexen extends Thing {
     private ActionSpecial actionSpecial;
     private byte[] actionArgs;
 
-    public ThingHexen(int startPtr, int lumpSize, String name) {
+    public HexenThing(int startPtr, int lumpSize, String name) {
         super(startPtr, lumpSize, name);
     }
 

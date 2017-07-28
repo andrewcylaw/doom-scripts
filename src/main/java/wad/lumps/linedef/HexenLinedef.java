@@ -3,7 +3,7 @@ package wad.lumps.linedef;
 import wad.lumps.Sidedef;
 import wad.lumps.linedef.actionspecial.ActionSpecial;
 
-public class LinedefHexen extends Linedef {
+public class HexenLinedef extends Linedef {
 
     ActionSpecial actionSpecial; // TODO: doom enum'd action special
     byte[] actionArgs;
@@ -11,7 +11,7 @@ public class LinedefHexen extends Linedef {
     private Sidedef rightSidedef;
     private Sidedef leftSidedef;
 
-    public LinedefHexen(int startPtr, int lumpSize, String name) {
+    public HexenLinedef(int startPtr, int lumpSize, String name) {
         super(startPtr, lumpSize, name);
 
         actionArgs = new byte[5];
