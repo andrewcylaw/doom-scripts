@@ -1,5 +1,6 @@
 package wad.lumps.linedef;
 
+import wad.lumps.Vertex;
 import wad.lumps.linedef.linedefflag.DoomLinedefFlag;
 
 import java.util.ArrayList;
@@ -7,9 +8,9 @@ import java.util.List;
 
 public class DoomLinedef extends Linedef {
 
-    private short beginningVertex;
-    private short endVertex;
-    private List<DoomLinedefFlag> flags; // TODO: enumize this
+    private Vertex beginningVertex;
+    private Vertex endVertex;
+    private List<DoomLinedefFlag> flags;
     private int sectorTag;
     private short rightSidedef;
     private short leftSidedef;
@@ -17,34 +18,6 @@ public class DoomLinedef extends Linedef {
     public DoomLinedef(int startPtr, int lumpSize, String name) {
         super(startPtr, lumpSize, name);
         this.flags = new ArrayList<>();
-    }
-
-    public short getBeginningVertex() {
-        return beginningVertex;
-    }
-
-    public void setBeginningVertex(short beginningVertex) {
-        this.beginningVertex = beginningVertex;
-    }
-
-    public short getEndVertex() {
-        return endVertex;
-    }
-
-    public void setEndVertex(short endVertex) {
-        this.endVertex = endVertex;
-    }
-
-    public List<DoomLinedefFlag> getFlags() {
-        return flags;
-    }
-
-    public void setFlags(List<DoomLinedefFlag> flags) {
-        this.flags = flags;
-    }
-
-    public void addFlag(DoomLinedefFlag flag) {
-        this.flags.add(flag);
     }
 
     public int getSectorTag() {
